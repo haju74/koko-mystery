@@ -369,18 +369,6 @@ margin-bottom:20px;
         max-width: 95%; /* 讓手機版左右留白小一點，空間更大 */
     }
 
-    .navbar {
-        height: auto; /* 讓導覽列在手機版可以自動伸展 */
-        border-radius: 20px; /* 手機版圓角縮小一點比較好看 */
-        margin-top: 10px;
-    }
-
-    .nav-link {
-        margin-left: 0; /* 消除手機版選單左邊的間距 */
-        text-align: center;
-        font-size: 20px;
-    }
-
     .section-title {
         letter-spacing: 10px; /* 手機版標題字間距縮小，不然會爆出去 */
         font-size: 28px;
@@ -394,5 +382,27 @@ margin-bottom:20px;
     .motivation-img img {
         height: auto;
         width: 100%; /* 圖片寬度自動適應手機 */
+    }
+}
+
+/* 專門針對手機版調整 */
+@media (max-width: 768px) {
+    /* 讓首頁內容再往下推一點，避開導覽列 */
+    .hero {
+        padding-top: 150px !important; /* 增加頂部間距 */
+        min-height: auto; /* 手機版不需要強制 800px 高度 */
+    }
+
+    /* 調整導覽列高度，避免在手機上太厚 */
+    .navbar {
+        height: auto; 
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+
+    /* 調整標題字體大小，避免太擠 */
+    .hero-text h1 {
+        font-size: 32px;
+        margin-top: 20px;
     }
 }
