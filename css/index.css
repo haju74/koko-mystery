@@ -362,3 +362,37 @@ margin-bottom:20px;
     margin-bottom:15px;
   }
 }
+
+/* 加強手機版顯示 */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%; /* 讓手機版左右留白小一點，空間更大 */
+    }
+
+    .navbar {
+        height: auto; /* 讓導覽列在手機版可以自動伸展 */
+        border-radius: 20px; /* 手機版圓角縮小一點比較好看 */
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin-left: 0; /* 消除手機版選單左邊的間距 */
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .section-title {
+        letter-spacing: 10px; /* 手機版標題字間距縮小，不然會爆出去 */
+        font-size: 28px;
+    }
+
+    /* 讓兩欄並排在手機版變成上下堆疊 */
+    .col-6 {
+        width: 100%; 
+    }
+    
+    .motivation-img img {
+        height: auto;
+        width: 100%; /* 圖片寬度自動適應手機 */
+    }
+}
